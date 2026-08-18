@@ -17,7 +17,6 @@ void rotate(
     double acceleration = 12.0, 
     double slewRateThreshold = 27.0
 );
-void shake(int shakes, double firstVoltage, double secondVoltage, int shakeDuration, int coolDown);
 void translate(
     int displacement, 
     double kP = 0.1, //0.10

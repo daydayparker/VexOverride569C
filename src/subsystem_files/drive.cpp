@@ -35,6 +35,9 @@ void setDriveByDriver(){
 }
 
 //AUTONOMOUS FUNCTIONS
+//NEED INTERTIAL SENSOR TO USE
+//OR, DIFFERENT SYSTEM (LEMLIB) COULD ALSO BE IMPLEMENTED IF THERE IS ODOMETRY
+/*
 void rotate(int degrees, double kP, double kI, double kD, double acceleration, double slewRateThreshold){
     //PID VARIABLES
     double error;
@@ -96,19 +99,6 @@ void rotate(int degrees, double kP, double kI, double kD, double acceleration, d
 
     //STOP MOVING
     setDrive(0, 0);
-}
-
-void shake(int shakes, double firstVoltage, double secondVoltage, int shakeDuration, int coolDown)
-{
-    allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
-    for (int shakeCounter = 0; shakeCounter < shakes; shakeCounter++)
-    {
-        setDrive(firstVoltage, firstVoltage);
-        pros::delay(shakeDuration);
-        setDrive(secondVoltage, secondVoltage);
-        pros::delay(coolDown);
-    }
-    allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
 }
 
 void translate(int displacement, double kP, double kI, double kD, double kA, double acceleration, double slewRateThreshold){
@@ -185,3 +175,4 @@ void translate(int displacement, double kP, double kI, double kD, double kA, dou
     //STOP MOVING
     setDrive(0, 0);
 }
+*/
