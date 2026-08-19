@@ -6,17 +6,17 @@
 //PORT NUMBERS NEED TO BE DECIDED
 //REVERSED MOTORS NEED TO BE FIGURED OUT
 pros::MotorGroup allDriveMotorGroup(
-    {-1, -2, 3, 4}, 
+    {-12, -14, 11, 13}, 
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
 pros::MotorGroup leftDriveMotorGroup(
-    {-1, -2}, 
+    {-12, -14}, 
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
 pros::MotorGroup rightDriveMotorGroup(
-    {3, 4}, 
+    {11, 13}, 
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );

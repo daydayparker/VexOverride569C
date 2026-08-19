@@ -16,7 +16,7 @@ const int TRANSLATION_PRECISION = 5;
 //DURATION CONSTANTS
 //https://www.vexforum.com/t/v5-distance-sensor-technical-details/88482/8
 //DISTANCE SENSOR FREQUENCY IS ~30 HZ: jpearman
-const int WHILE_LOOP_DELAY_DURATION = 10;
+const int LOOP_DURATION = 10;
 const int DISTANCE_SENSOR_DELAY = 40;
 
 //MOTOR CONSTANTS
