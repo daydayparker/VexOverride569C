@@ -18,28 +18,6 @@ void on_center_button() {
 }
 */
 
-/*
-void display_img_from_c_array(){
-	// create a variable for the c array (image)
-	LV_IMAGE_DECLARE(john_robot_image);
-
-	// declare and define the image object
-	lv_obj_t* img = lv_image_create(lv_screen_active());
-
-	// set the source data for the image
-	lv_image_set_src(img, &john_robot_image);
-
-	//align image
-	lv_obj_align(img, LV_ALIGN_CENTER, 0, 0);
-}
-
-void display_img_from_file(const void * src){
-
-}
-*/
-
-
-
 /**
  * Runs initialization code. This occurs as soon as the program is started.
  *
@@ -48,27 +26,24 @@ void display_img_from_file(const void * src){
  */
 
 void initialize() {
-	//PUT AWESOME GIF ON THE BRAIN SCREEN
-	//static Gif gif("/usd/DannyMoment.gif", lv_scr_act());
-
+	display_img_from_c_array();
+	
 	//PUT AWESOME TEXT ON THE CONTROLLER SCREEN
 	controller.print(0, 0, "By: %s", "daydayparker");
 
 	//SET MOTOR BRAKE TYPES
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
 	intakeMotor.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	leverMotor.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-
-	//RESET LEVER MOTOR
-	leverMotor.tare_position();
 
 	//CALIBRATE THE INERTIAL SENSOR
-	inertialSensor.reset();
+	//inertialSensor.reset();
 
 	//WAITING FOR THE INERTIAL SENSOR TO CALIBRATE
+	/*
 	while (inertialSensor.is_calibrating()){
-		pros::delay(WHILE_LOOP_DELAY_DURATION);
+		pros::delay(LOOP_DURATION);
 	}
+	*/
 }
 
 /**
@@ -106,11 +81,7 @@ void competition_initialize() {
  */
 
 void autonomous() {
-	//skillsAuton(); //1
-	//leftMatchAuton(); //2
-	rightMatchAuton(); //3
-	//soloMatchAuton(); //5
-	//janeTesting(); //8
+	
 }
 
 /**
@@ -132,35 +103,9 @@ void opcontrol(){
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
 	
 	pros::Task intakeTask(intakeLoop);
-	pros::Task leverTask(leverLoop);
 
 	while (true){
-		pros::delay(WHILE_LOOP_DELAY_DURATION);
-		
-		//L1: EXTEND / RETRACT DESCORE PNEUMATIC: TOGGLE
-		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1)){
-			isDescorePneumaticExtended = !isDescorePneumaticExtended;
-			descorePneumatic.set_value(isDescorePneumaticExtended);
-		}
-
-		//L2: MATCH LOAD EXTENDED / RETRACTED: TOGGLE
-		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L2)){
-			isMatchLoadPneumaticExtended = !isMatchLoadPneumaticExtended;
-			matchLoadPneumatic.set_value(isMatchLoadPneumaticExtended);
-		}
-
-		//DOWN: EXTEND / RETRACT LEVER PNEUMATIC: TOGGLE
-		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)){
-			isLeverPneumaticExtended = !isLeverPneumaticExtended;
-			leverPneumatic.set_value(isLeverPneumaticExtended);
-		}
-
-		//LEFT: EXTEND / RETRACT HOOD PNEUMATIC: TOGGLE
-		if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_LEFT)){
-			isHoodPneumaticExtended = !isHoodPneumaticExtended;
-			hoodPneumatic.set_value(isHoodPneumaticExtended);
-		}
-		
+		pros::delay(LOOP_DURATION);
 		setDriveByDriver();
 	}
 }

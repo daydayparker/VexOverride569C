@@ -79,12 +79,17 @@ void opcontrol(void);
 #include "subsystem_headers/states.hpp"
 
 //THANK YOU'S
+////IN PROGRAM CURRENTLY
+//THANK YOU: https://www.youtube.com/@valor2393S
+#include "subsystem_headers/image.hpp"
+
+////NOT IN PROGRAM CURRENTLY
+/*
 //THANK YOU: LemLib
 #include "lemlib/api.hpp" // IWYU pragma: keep
 //THANK YOU: theol0403
-//#include "gif-pros/gifclass.hpp"
-//THANK YOU: https://www.youtube.com/@valor2393S
-#include "subsystem_headers/image.hpp"
+#include "gif-pros/gifclass.hpp"
+*/
 
 
 /**
