@@ -72,6 +72,7 @@ void opcontrol(void);
 
 #ifdef __cplusplus
 #include "subsystem_headers/autons.hpp"
+#include "subsystem_headers/cascade.hpp"
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/drive.hpp"
 #include "subsystem_headers/globals.hpp"

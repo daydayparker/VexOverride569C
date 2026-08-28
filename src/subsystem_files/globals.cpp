@@ -1,5 +1,14 @@
 #include "main.h"
 
+//CASCADE MOTORS
+//{RIGHT, LEFT}
+//CHECK IF THIS IS THE RIGHT DIRECTION
+pros::MotorGroup cascadeMotorGroup(
+    {1, -2},
+    pros::v5::MotorGears::blue, 
+    pros::v5::MotorUnits::degrees
+);
+
 //DRIVE MOTORS
 //{LEFTFRONT, LEFTBACK, RIGHTFRONT, RIGHTBACK}
 //{FRONT, BACK}
@@ -22,8 +31,9 @@ pros::MotorGroup rightDriveMotorGroup(
 );
 
 //INTAKE MOTOR
-pros::Motor intakeMotor(
-    5, 
+//CHECK IF THIS IS THE RIGHT DIRECTION
+pros::MotorGroup intakeMotorGroup(
+    {5, 6},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );

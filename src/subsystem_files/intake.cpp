@@ -29,18 +29,18 @@ void intakeLoop(void*){
         {
         //REVERSE: HOLD
         case 0:
-            intakeMotor.move(-MAX_VOLTAGE);
+            intakeMotorGroup.move(-MAX_VOLTAGE);
             break;
         //STOP INTAKE
         case 1:
-            intakeMotor.move(0);
+            intakeMotorGroup.move(0);
             break;
         //SPIN INTAKE FORWARD: TOGGLE
         case 2:
-            intakeMotor.move(MAX_VOLTAGE);
+            intakeMotorGroup.move(MAX_VOLTAGE);
             break;
         default:
-            intakeMotor.move(0); 
+            intakeMotorGroup.move(0); 
             break;  
         }
 

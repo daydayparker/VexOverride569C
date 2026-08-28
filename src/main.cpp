@@ -33,7 +33,8 @@ void initialize() {
 
 	//SET MOTOR BRAKE TYPES
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-	intakeMotor.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	cascadeMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
+	intakeMotorGroup.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
 	//CALIBRATE THE INERTIAL SENSOR
 	//inertialSensor.reset();
@@ -103,9 +104,10 @@ void opcontrol(){
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
 	
 	pros::Task intakeTask(intakeLoop);
+	pros::Task cascadetask(cascadeLoop);
 
 	while (true){
-		pros::delay(LOOP_DURATION);
 		setDriveByDriver();
+		pros::delay(LOOP_DURATION);
 	}
 }
