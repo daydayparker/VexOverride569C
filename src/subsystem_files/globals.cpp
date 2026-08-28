@@ -4,7 +4,7 @@
 //{RIGHT, LEFT}
 //CHECK IF THIS IS THE RIGHT DIRECTION
 pros::MotorGroup cascadeMotorGroup(
-    {1, -2},
+    {3, -4},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
@@ -15,12 +15,12 @@ pros::MotorGroup cascadeMotorGroup(
 //PORT NUMBERS NEED TO BE DECIDED
 //REVERSED MOTORS NEED TO BE FIGURED OUT
 pros::MotorGroup allDriveMotorGroup(
-    {-12, -14, 11, 13}, 
+    {-12, -15, 11, 13}, 
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
 pros::MotorGroup leftDriveMotorGroup(
-    {-12, -14}, 
+    {-12, -15}, 
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
@@ -33,7 +33,7 @@ pros::MotorGroup rightDriveMotorGroup(
 //INTAKE MOTOR
 //CHECK IF THIS IS THE RIGHT DIRECTION
 pros::MotorGroup intakeMotorGroup(
-    {5, 6},
+    {1, 10},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
