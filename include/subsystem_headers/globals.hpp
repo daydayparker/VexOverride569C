@@ -1,6 +1,4 @@
 #include "main.h"
-#include "lemlib/chassis/chassis.hpp"
-#include "lemlib/api.hpp"
 
 //CASCADE MOTORS
 extern pros::MotorGroup cascadeMotorGroup;
