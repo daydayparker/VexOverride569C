@@ -33,7 +33,7 @@ pros::MotorGroup rightDriveMotorGroup(
 //INTAKE MOTOR
 //CHECK IF THIS IS THE RIGHT DIRECTION
 pros::MotorGroup intakeMotorGroup(
-    {1, 10},
+    {1, -10},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
