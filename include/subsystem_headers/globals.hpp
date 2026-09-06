@@ -3,6 +3,9 @@
 //CASCADE MOTORS
 extern pros::MotorGroup cascadeMotorGroup;
 
+////CLAW MOTOR
+extern pros::Motor clawMotor;
+
 //DRIVE MOTORS
 extern pros::MotorGroup allDriveMotorGroup;
 extern pros::MotorGroup leftDriveMotorGroup;

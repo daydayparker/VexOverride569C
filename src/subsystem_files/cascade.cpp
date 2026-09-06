@@ -17,15 +17,15 @@ void cascadeLoop(void*){
         
         switch (cascadeState)
         {
-        //REVERSE: HOLD
+        //UP: HOLD
         case 0:
             cascadeMotorGroup.move(MAX_VOLTAGE);
             break;
-        //STOP INTAKE
+        //DOWN: HOLD
         case 1:
             cascadeMotorGroup.move(-MAX_VOLTAGE);
             break;
-        //SPIN INTAKE FORWARD: TOGGLE
+        //STOP CASCADE
         case 2:
             cascadeMotorGroup.move(0);
             break;
