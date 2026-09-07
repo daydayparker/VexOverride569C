@@ -50,3 +50,8 @@ pros::MotorGroup intakeMotorGroup(
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
+
+//ROTATION SENSORS
+pros::Rotation anglerRotationSensor(5);
+pros::Rotation horizontalRotationSensor(6);
+pros::Rotation verticalRotationSensor(7);
