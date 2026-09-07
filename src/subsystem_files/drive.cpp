@@ -35,9 +35,6 @@ void setDriveByDriver(){
 }
 
 //AUTONOMOUS FUNCTIONS
-//NEED INTERTIAL SENSOR TO USE
-//OR, DIFFERENT SYSTEM (LEMLIB) COULD ALSO BE IMPLEMENTED IF THERE IS ODOMETRY
-/*
 void rotate(int degrees, double kP, double kI, double kD, double acceleration, double slewRateThreshold){
     //PID VARIABLES
     double error;
@@ -93,7 +90,7 @@ void rotate(int degrees, double kP, double kI, double kD, double acceleration, d
         setDrive(voltageFromPropotionalIntegralDerivative, -voltageFromPropotionalIntegralDerivative);
         
         //DELAY FOR LOOPING
-        pros::delay(WHILE_LOOP_DELAY_DURATION);
+        pros::delay(LOOP_DURATION);
 
     }
 
@@ -169,10 +166,9 @@ void translate(int displacement, double kP, double kI, double kD, double kA, dou
         setDrive(driveMotorVoltage - angleAdjustment, driveMotorVoltage + angleAdjustment);
 
         //DELAY FOR LOOPING
-        pros::delay(WHILE_LOOP_DELAY_DURATION);
+        pros::delay(LOOP_DURATION);
     }
 
     //STOP MOVING
     setDrive(0, 0);
 }
-*/

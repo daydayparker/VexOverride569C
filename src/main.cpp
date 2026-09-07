@@ -37,14 +37,12 @@ void initialize() {
 	intakeMotorGroup.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
 	//CALIBRATE THE INERTIAL SENSOR
-	//inertialSensor.reset();
+	inertialSensor.reset();
 
 	//WAITING FOR THE INERTIAL SENSOR TO CALIBRATE
-	/*
 	while (inertialSensor.is_calibrating()){
 		pros::delay(LOOP_DURATION);
 	}
-	*/
 }
 
 /**
