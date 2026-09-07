@@ -3,6 +3,10 @@
 //CONTROLLER
 extern pros::Controller controller;
 
+//INERTIAL MEASUREMENT UNIT
+extern pros::Imu inertialSensor;
+
+//INERTIAL MEASUREMENT UNIT
 //MOTORS
 ////CASCADE MOTORS
 extern pros::MotorGroup cascadeMotorGroup;

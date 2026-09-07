@@ -3,6 +3,9 @@
 //CONTROLLER
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
+//INERTIAL MEASUREMENT UNIT
+pros::Imu inertialSensor(8);
+
 //MOTORS
 ////CASCADE MOTORS
 //////{RIGHT, LEFT}
