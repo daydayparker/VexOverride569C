@@ -4,7 +4,7 @@
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 //INERTIAL MEASUREMENT UNIT
-pros::Imu inertialSensor(8);
+pros::Imu inertialSensor(7);
 
 //MOTORS
 ////CASCADE MOTORS
@@ -12,7 +12,7 @@ pros::Imu inertialSensor(8);
 //////CHECK IF THE MOTOR GROUP DESCRIPTION IS CORRECT
 //////CHECK IF THIS IS THE RIGHT DIRECTION
 pros::MotorGroup cascadeMotorGroup(
-    {2, -3},
+    {2, -4},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
@@ -20,7 +20,7 @@ pros::MotorGroup cascadeMotorGroup(
 ////CLAW MOTOR
 //////CHECK IF THIS IS THE RIGHT DIRECTION
 pros::Motor clawMotor(
-    4,
+    9,
     pros::v5::MotorGears::blue,
     pros::v5::MotorUnits::degrees
 );
@@ -49,7 +49,7 @@ pros::MotorGroup rightDriveMotorGroup(
 ////INTAKE MOTOR
 //////{NEEDS DESCRIPTION OF MOTORS}
 pros::MotorGroup intakeMotorGroup(
-    {1, -10},
+    {1, -8},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
