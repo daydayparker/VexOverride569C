@@ -7,7 +7,7 @@ void clawLoop(void*){
 		{
 			clawState = 0;
 		}
-        else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_DOWN)){
+        else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_RIGHT)){
             clawState = 1;
         }
         else{

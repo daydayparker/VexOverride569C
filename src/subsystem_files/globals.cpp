@@ -20,7 +20,7 @@ pros::MotorGroup cascadeMotorGroup(
 ////CLAW MOTOR
 //////CHECK IF THIS IS THE RIGHT DIRECTION
 pros::Motor clawMotor(
-    9,
+    6,
     pros::v5::MotorGears::blue,
     pros::v5::MotorUnits::degrees
 );
@@ -56,5 +56,5 @@ pros::MotorGroup intakeMotorGroup(
 
 //ROTATION SENSORS
 pros::Rotation anglerRotationSensor(5);
-pros::Rotation horizontalRotationSensor(6);
+pros::Rotation horizontalRotationSensor(16);
 pros::Rotation verticalRotationSensor(7);
