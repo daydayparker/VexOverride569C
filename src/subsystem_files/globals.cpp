@@ -8,18 +8,15 @@ pros::Imu inertialSensor(7);
 
 //MOTORS
 ////CASCADE MOTORS
-//////{RIGHT, LEFT}
-//////CHECK IF THE MOTOR GROUP DESCRIPTION IS CORRECT
-//////CHECK IF THIS IS THE RIGHT DIRECTION
+//////{LEFT, RIGHT}
 pros::MotorGroup cascadeMotorGroup(
     {2, -4},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
 
-////CLAW MOTOR
-//////CHECK IF THIS IS THE RIGHT DIRECTION
-pros::Motor clawMotor(
+////ANGLER MOTOR
+pros::Motor anglerMotor(
     6,
     pros::v5::MotorGears::blue,
     pros::v5::MotorUnits::degrees

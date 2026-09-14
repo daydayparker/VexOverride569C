@@ -3,8 +3,8 @@
 //CASCADE STATES
 extern int cascadeState;
 
-//CLAW STATES
-extern int clawState;
+//ANGLER STATES
+extern int anglerState;
 
 //INTAKE STATES
 extern bool intakeOn;

@@ -1,35 +1,35 @@
 #include "main.h"
 
-void clawLoop(void*){
+void anglerLoop(void*){
     while (true)
     {
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_UP))
 		{
-			clawState = 0;
+			anglerState = 0;
 		}
         else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_RIGHT)){
-            clawState = 1;
+            anglerState = 1;
         }
         else{
-            clawState = 2;
+            anglerState = 2;
         }
         
-        switch (clawState)
+        switch (anglerState)
         {
         //CLOSE: HOLD
         case 0:
-            clawMotor.move(MAX_VOLTAGE);
+            anglerMotor.move(MAX_VOLTAGE);
             break;
         //OPEN: HOLD
         case 1:
-            clawMotor.move(-MAX_VOLTAGE);
+            anglerMotor.move(-MAX_VOLTAGE);
             break;
-        //STOP CLAW MOTOR
+        //STOP ANGLER MOTOR
         case 2:
-            clawMotor.move(0);
+            anglerMotor.move(0);
             break;
         default:
-            clawMotor.move(0); 
+            anglerMotor.move(0); 
             break;  
         }
 

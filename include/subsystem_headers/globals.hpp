@@ -12,7 +12,7 @@ extern pros::Imu inertialSensor;
 extern pros::MotorGroup cascadeMotorGroup;
 
 ////CLAW MOTOR
-extern pros::Motor clawMotor;
+extern pros::Motor anglerMotor;
 
 ////DRIVE MOTORS
 extern pros::MotorGroup allDriveMotorGroup;

@@ -3,8 +3,8 @@
 //CASCADE STATES
 int cascadeState = 0;
 
-//CLAW STATES
-int clawState;
+//ANGLER STATES
+int anglerState;
 
 //INTAKE STATES
 bool intakeOn = false;
