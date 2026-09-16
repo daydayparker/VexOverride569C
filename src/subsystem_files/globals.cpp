@@ -11,7 +11,7 @@ pros::Imu inertialSensor(7);
 //////{LEFT, RIGHT}
 pros::MotorGroup cascadeMotorGroup(
     {2, -4},
-    pros::v5::MotorGears::blue, 
+    pros::v5::MotorGears::green, 
     pros::v5::MotorUnits::degrees
 );
 
@@ -26,7 +26,6 @@ pros::Motor anglerMotor(
 //////{LEFTFRONT, LEFTBACK, RIGHTFRONT, RIGHTBACK}
 //////{FRONT, BACK}
 //////{FRONT, BACK}
-//////PORT NUMBERS NEED TO BE DECIDED
 pros::MotorGroup allDriveMotorGroup(
     {-12, -15, 11, 13}, 
     pros::v5::MotorGears::blue, 
