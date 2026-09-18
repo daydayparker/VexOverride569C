@@ -9,3 +9,6 @@ int anglerState;
 //INTAKE STATES
 bool intakeOn = false;
 int intakeState = 1;
+
+//MACRO STATES
+bool macroRunning = false;

@@ -9,3 +9,6 @@ extern int anglerState;
 //INTAKE STATES
 extern bool intakeOn;
 extern int intakeState;
+
+//MACRO STATES
+extern bool macroRunning;
