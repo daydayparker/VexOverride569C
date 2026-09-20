@@ -51,6 +51,8 @@ void intakeLoop(void*){
                 pros::delay(SCORING_MACRO_DURATION / 2);
                 intakeMotorGroup.move(-MAX_VOLTAGE);
                 pros::delay(SCORING_MACRO_DURATION / 2);
+                intakeMotorGroup.move(0);
+                intakeState = 1;
                 macroRunning = false;
             default:
                 intakeMotorGroup.move(0); 

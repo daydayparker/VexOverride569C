@@ -38,6 +38,8 @@ void cascadeLoop(void*){
                 pros::delay(SCORING_MACRO_DURATION / 2);
                 cascadeMotorGroup.move(MAX_VOLTAGE);
                 pros::delay(SCORING_MACRO_DURATION / 2);
+                cascadeState = 3;
+                cascadeMotorGroup.move(0);
                 macroRunning = false;
             //STOP CASCADE
             case 3:
