@@ -10,7 +10,7 @@ pros::Imu inertialSensor(7);
 ////CASCADE MOTORS
 //////{LEFT, RIGHT}
 pros::MotorGroup cascadeMotorGroup(
-    {2, -4},
+    {-2, 4},
     pros::v5::MotorGears::green, 
     pros::v5::MotorUnits::degrees
 );
