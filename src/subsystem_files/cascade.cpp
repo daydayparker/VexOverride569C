@@ -13,13 +13,8 @@ void cascadeLoop(void*){
                 cascadeState = 1;
 
             }
-            else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A))
-            {
-                macroRunning = true;
-                cascadeState = 2;
-            }
             else{
-                cascadeState = 3;
+                cascadeState = 2;
             }
             
             switch (cascadeState)
@@ -32,17 +27,8 @@ void cascadeLoop(void*){
             case 1:
                 cascadeMotorGroup.move(-MAX_VOLTAGE);
                 break;
-            //SCORING MACROS
-            case 2:
-                cascadeMotorGroup.move(-MAX_VOLTAGE);
-                pros::delay(SCORING_MACRO_DURATION / 2);
-                cascadeMotorGroup.move(MAX_VOLTAGE);
-                pros::delay(SCORING_MACRO_DURATION / 2);
-                cascadeState = 3;
-                cascadeMotorGroup.move(0);
-                macroRunning = false;
             //STOP CASCADE
-            case 3:
+            case 2:
                 cascadeMotorGroup.move(0);
                 break;
             default:

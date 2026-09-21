@@ -12,3 +12,4 @@ extern int intakeState;
 
 //MACRO STATES
 extern bool macroRunning;
+extern int macroState;

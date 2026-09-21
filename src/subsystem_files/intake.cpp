@@ -23,11 +23,6 @@ void intakeLoop(void*){
             else if (intakeOn){
                 intakeState = 2;
             }
-            else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A))
-            {
-                macroRunning = true;
-                intakeState = 3;
-            }
             else{
                 intakeState = 1;
             }
@@ -46,14 +41,6 @@ void intakeLoop(void*){
             case 2:
                 intakeMotorGroup.move(MAX_VOLTAGE);
                 break;
-            //SCORING MACRO:
-            case 3:
-                pros::delay(SCORING_MACRO_DURATION / 2);
-                intakeMotorGroup.move(-MAX_VOLTAGE);
-                pros::delay(SCORING_MACRO_DURATION / 2);
-                intakeMotorGroup.move(0);
-                intakeState = 1;
-                macroRunning = false;
             default:
                 intakeMotorGroup.move(0); 
                 break;  

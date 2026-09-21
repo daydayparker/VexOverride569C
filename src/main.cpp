@@ -102,9 +102,10 @@ void autonomous() {
 void opcontrol(){
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
 	
-	pros::Task cascadeTask(cascadeLoop);
 	pros::Task anglerTask(anglerLoop);
+	pros::Task cascadeTask(cascadeLoop);
 	pros::Task intakeTask(intakeLoop);
+	pros::Task macrosTask(macrosLoop);
 
 	while (true){
 		setDriveByDriver();

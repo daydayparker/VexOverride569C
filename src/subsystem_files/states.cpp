@@ -12,3 +12,4 @@ int intakeState = 1;
 
 //MACRO STATES
 bool macroRunning = false;
+int macroState = 0;
