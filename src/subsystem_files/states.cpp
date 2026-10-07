@@ -7,7 +7,7 @@ int isAnglerUp;
 int cascadeState = 0;
 
 //CLAW STATES
-bool isClawOpen = false;
+bool isClawClosed = false;
 
 //INTAKE STATES
 bool intakeOn = false;

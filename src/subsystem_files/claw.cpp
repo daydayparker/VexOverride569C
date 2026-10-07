@@ -7,10 +7,10 @@ void clawLoop(void*) {
         {
             if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y))
             {
-                isClawOpen = !isClawOpen;
+                isClawClosed = !isClawClosed;
             }
         
-            clawPneumatic.set_value(isClawOpen);
+            clawPneumatic.set_value(isClawClosed);
         }
 
         pros::delay(LOOP_DURATION);

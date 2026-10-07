@@ -105,6 +105,7 @@ void opcontrol(){
 	pros::Task cascadeTask(cascadeLoop);
 	pros::Task clawTask(clawLoop);
 	pros::Task intakeTask(intakeLoop);
+	pros::Task macrosTask(macrosLoop);
 
 	while (true){
 		setDriveByDriver();

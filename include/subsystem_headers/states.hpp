@@ -7,7 +7,7 @@ extern int isAnglerUp;
 extern int cascadeState;
 
 //CLAW STATES
-extern bool isClawOpen;
+extern bool isClawClosed;
 
 //INTAKE STATES
 extern bool intakeOn;

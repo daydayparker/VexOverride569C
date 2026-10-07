@@ -23,20 +23,14 @@ void macrosLoop(void*){
 
                 cascadeState = 0;
                 cascadeMotorGroup.move(MAX_VOLTAGE);
-                intakeState = 0;
-                intakeMotorGroup.move(-MAX_VOLTAGE);
-                pros::delay(SCORING_MACRO_DURATION / 8.0);
+                isClawClosed = false;
+                clawPneumatic.set_value(isClawClosed);
+                pros::delay(SCORING_MACRO_DURATION / 2.0);
 
-                anglerState = 1;
-                anglerMotor.move(-MAX_VOLTAGE);
-                pros::delay(SCORING_MACRO_DURATION * (3.0 / 8.0));
-                
-                anglerState = 2;
-                anglerMotor.move(0);
                 cascadeState = 2;
                 cascadeMotorGroup.move(0);
                 intakeState = 1;
-                intakeMotorGroup.move(0);
+                intakeMotor.move(0);
                 macroRunning = false;
                 break;
             default:
