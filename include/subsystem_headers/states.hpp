@@ -1,10 +1,13 @@
 #include "main.h"
 
+//ANGLER STATES
+extern int isAnglerUp;
+
 //CASCADE STATES
 extern int cascadeState;
 
-//ANGLER STATES
-extern int anglerState;
+//CLAW STATES
+extern bool isClawOpen;
 
 //INTAKE STATES
 extern bool intakeOn;

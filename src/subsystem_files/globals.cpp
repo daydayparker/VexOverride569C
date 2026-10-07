@@ -15,13 +15,6 @@ pros::MotorGroup cascadeMotorGroup(
     pros::v5::MotorUnits::degrees
 );
 
-////ANGLER MOTOR
-pros::Motor anglerMotor(
-    6,
-    pros::v5::MotorGears::blue,
-    pros::v5::MotorUnits::degrees
-);
-
 ////DRIVE MOTORS
 //////{LEFTFRONT, LEFTBACK, RIGHTFRONT, RIGHTBACK}
 //////{FRONT, BACK}
@@ -43,12 +36,15 @@ pros::MotorGroup rightDriveMotorGroup(
 );
 
 ////INTAKE MOTOR
-//////{NEEDS DESCRIPTION OF MOTORS}
-pros::MotorGroup intakeMotorGroup(
-    {1, -8},
+pros::Motor intakeMotor(
+    1,
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
+
+//PNEUMATICS
+pros::adi::DigitalOut anglerPneumatic('A');
+pros::adi::DigitalOut clawPneumatic('B');
 
 //ROTATION SENSORS
 pros::Rotation anglerRotationSensor(5);

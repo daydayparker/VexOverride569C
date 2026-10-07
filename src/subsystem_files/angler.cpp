@@ -5,38 +5,15 @@ void anglerLoop(void*){
     {
         if (!macroRunning)
         {
-            if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_UP))
+            if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_RIGHT))
             {
-                anglerState = 0;
+                isAnglerUp = !isAnglerUp;
             }
-            else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_RIGHT)){
-                anglerState = 1;
-            }
-            else{
-                anglerState = 2;
-            }
-            
-            switch (anglerState)
-            {
-            //CLOSE: HOLD
-            case 0:
-                anglerMotor.move(MAX_VOLTAGE);
-                break;
-            //OPEN: HOLD
-            case 1:
-                anglerMotor.move(-MAX_VOLTAGE);
-                break;
-            //STOP ANGLER MOTOR
-            case 2:
-                anglerMotor.move(0);
-                break;
-            default:
-                anglerMotor.move(0); 
-                break;  
-            }
+        
+            anglerPneumatic.set_value(isAnglerUp);
         }
 
         pros::delay(LOOP_DURATION);
     }
-
 }
+
