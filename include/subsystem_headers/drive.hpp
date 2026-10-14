@@ -26,4 +26,3 @@ void translate(
     double acceleration = 4.0, 
     double slewRateThreshold = 27.0
 );
-

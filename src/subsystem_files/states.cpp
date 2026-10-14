@@ -1,13 +1,10 @@
 #include "main.h"
 
-//ANGLER STATES
-int isAnglerUp;
-
 //CASCADE STATES
 int cascadeState = 0;
 
-//CLAW STATES
-bool isClawClosed = false;
+//ANGLER STATES
+int anglerState;
 
 //INTAKE STATES
 bool intakeOn = false;
