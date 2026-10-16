@@ -18,11 +18,11 @@ void anglerLoop(void*){
             
             switch (anglerState)
             {
-            //CLOSE: HOLD
+            //LOWER: HOLD
             case 0:
                 anglerMotor.move(MAX_VOLTAGE);
                 break;
-            //OPEN: HOLD
+            //RAISE: HOLD
             case 1:
                 anglerMotor.move(-MAX_VOLTAGE);
                 break;
