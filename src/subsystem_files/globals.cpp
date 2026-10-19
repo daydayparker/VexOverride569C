@@ -45,7 +45,7 @@ pros::MotorGroup rightDriveMotorGroup(
 ////INTAKE MOTOR
 //////{NEEDS DESCRIPTION OF MOTORS}
 pros::MotorGroup intakeMotorGroup(
-    {1, -8},
+    {1, -9},
     pros::v5::MotorGears::blue, 
     pros::v5::MotorUnits::degrees
 );
