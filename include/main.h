@@ -88,8 +88,6 @@ void opcontrol(void);
 
 ////NOT IN PROGRAM CURRENTLY
 /*
-//THANK YOU: LemLib
-#include "lemlib/api.hpp" // IWYU pragma: keep
 //THANK YOU: theol0403
 #include "gif-pros/gifclass.hpp"
 */

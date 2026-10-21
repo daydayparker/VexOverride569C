@@ -1,5 +1,3 @@
-#include "main.h"
-
 //AUTONOMOUS CONSTANTS
 ////PID ROTATIONAL CONSTANTS
 extern const double ROTATIONAL_MINIMUM_DERIVATIVE;
@@ -12,6 +10,11 @@ extern const int TRANSLATIONAL_DERIVATIVE_EXIT;
 extern const int ANALOG_DEAD_ZONE;
 extern const int ROTATION_PRECISION;
 extern const int TRANSLATION_PRECISION;
+
+//DRIVETRAIN CONSTANTS
+extern const int DRIVETRAIN_RPM; 
+extern const float TRACK_WIDTH;
+extern const float WHEELBASE_DISTANCE;
 
 //DURATION  CONSTANTS
 //https://www.vexforum.com/t/v5-distance-sensor-technical-details/88482/8

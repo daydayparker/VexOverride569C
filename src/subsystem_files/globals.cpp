@@ -1,4 +1,6 @@
+#include "lemlib/chassis/trackingWheel.hpp"
 #include "main.h"
+#include "lemlib/api.hpp"
 
 //CONTROLLER
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
@@ -54,3 +56,12 @@ pros::MotorGroup intakeMotorGroup(
 pros::Rotation anglerRotationSensor(5);
 pros::Rotation horizontalRotationSensor(16);
 pros::Rotation verticalRotationSensor(7);
+
+//LEMLIB
+lemlib::Drivetrain drivetrain(&leftDriveMotorGroup,
+                              &rightDriveMotorGroup, // right motor group
+                              TRACK_WIDTH, // 10 inch track width
+                              lemlib::Omniwheel::NEW_2, // using new 4" omnis
+                              360, // drivetrain rpm is 360
+                              2 // horizontal drift is 2 (for now)
+);

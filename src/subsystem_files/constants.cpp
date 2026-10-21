@@ -13,6 +13,11 @@ const int ANALOG_DEAD_ZONE = 20;
 const int ROTATION_PRECISION = 1;
 const int TRANSLATION_PRECISION = 5;
 
+//DRIVETRAIN CONSTANTS
+const int DRIVETRAIN_RPM = 462; //HENRY DOES NOT KNOW!!! :(
+const float TRACK_WIDTH = 11.0;
+const float WHEELBASE_DISTANCE = 13.5;
+
 //DURATION CONSTANTS
 //https://www.vexforum.com/t/v5-distance-sensor-technical-details/88482/8
 //DISTANCE SENSOR FREQUENCY IS ~30 HZ: jpearman
