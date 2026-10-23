@@ -6,7 +6,7 @@
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
 //INERTIAL MEASUREMENT UNIT
-pros::Imu inertialSensor(7);
+pros::Imu inertialSensor(19);
 
 //MOTORS
 ////CASCADE MOTORS
@@ -62,6 +62,6 @@ lemlib::Drivetrain drivetrain(&leftDriveMotorGroup,
                               &rightDriveMotorGroup, // right motor group
                               TRACK_WIDTH, // 10 inch track width
                               lemlib::Omniwheel::NEW_2, // using new 4" omnis
-                              360, // drivetrain rpm is 360
+                              DRIVETRAIN_RPM, // drivetrain rpm is 360
                               2 // horizontal drift is 2 (for now)
 );
