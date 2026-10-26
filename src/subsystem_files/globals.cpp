@@ -53,15 +53,21 @@ pros::MotorGroup intakeMotorGroup(
 );
 
 //ROTATION SENSORS
-pros::Rotation anglerRotationSensor(5);
-pros::Rotation horizontalRotationSensor(16);
-pros::Rotation verticalRotationSensor(7);
+pros::Rotation horizontalRotationSensor(-20);
+pros::Rotation verticalRotationSensor(10);
 
 //LEMLIB
 lemlib::Drivetrain drivetrain(&leftDriveMotorGroup,
                               &rightDriveMotorGroup, // right motor group
                               TRACK_WIDTH, // 10 inch track width
-                              lemlib::Omniwheel::NEW_2, // using new 4" omnis
+                              lemlib::Omniwheel::NEW_325, // using new 4" omnis
                               DRIVETRAIN_RPM, // drivetrain rpm is 360
                               2 // horizontal drift is 2 (for now)
 );
+/*
+lemlib::TrackingWheel horizontalTrackingWheel(&horizontalRotationSensor,
+                                              lemlib::Omniwheel::NEW_2,g
+
+)
+*/
+lemlib::TrackingWheel verticalTrackingWheel;

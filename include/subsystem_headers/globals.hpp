@@ -23,6 +23,5 @@ extern pros::MotorGroup rightDriveMotorGroup;
 extern pros::MotorGroup intakeMotorGroup;
 
 //ROTATION SENSORS
-extern pros::Rotation anglerRotationSensor;
 extern pros::Rotation horizontalRotationSensor;
 extern pros::Rotation verticalRotationSensor;

@@ -29,7 +29,7 @@ void initialize() {
 	display_img_from_c_array();
 	
 	//PUT AWESOME TEXT ON THE CONTROLLER SCREEN
-	controller.print(0, 0, "By: %s", "daydayparker");
+	//controller.print(0, 0, "By: %s", "daydayparker");
 
 	//SET MOTOR BRAKE TYPES
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
@@ -43,6 +43,13 @@ void initialize() {
 	while (inertialSensor.is_calibrating()){
 		pros::delay(LOOP_DURATION);
 	}
+	
+	/*
+	while (true){
+		controller.print(0, 0, "%i", horizontalRotationSensor.get_position());
+        pros::delay(10); // delay to save resources. DO NOT REMOVE
+	}
+	*/
 }
 
 /**
