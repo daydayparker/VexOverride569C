@@ -6,7 +6,6 @@ extern pros::Controller controller;
 //INERTIAL MEASUREMENT UNIT
 extern pros::Imu inertialSensor;
 
-//INERTIAL MEASUREMENT UNIT
 //MOTORS
 ////CASCADE MOTORS
 extern pros::MotorGroup cascadeMotorGroup;
@@ -25,3 +24,18 @@ extern pros::MotorGroup intakeMotorGroup;
 //ROTATION SENSORS
 extern pros::Rotation horizontalRotationSensor;
 extern pros::Rotation verticalRotationSensor;
+
+//LEMLIB
+////DRIVETRAIN
+extern lemlib::Drivetrain drivetrain;
+
+////TRACKING WHEELS
+extern lemlib::TrackingWheel horizontalTrackingWheel;
+extern lemlib::TrackingWheel verticalTrackingWheel;
+
+////CONTROLLER SETTINGS
+extern lemlib::ControllerSettings lateralController;
+extern lemlib::ControllerSettings angularController;
+
+////CHASSIS
+extern lemlib::Chassis chassis;

@@ -6,8 +6,7 @@ double getAverageDriveEncoderValue(){
 }
 
 void setDrive(int left, int right){
-    leftDriveMotorGroup.move(left);
-    rightDriveMotorGroup.move(right);
+    chassis.tank(left, right);
 }
 
 int sign(double number){

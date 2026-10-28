@@ -85,6 +85,8 @@ void opcontrol(void);
 ////IN PROGRAM CURRENTLY
 //THANK YOU: https://www.youtube.com/@valor2393S
 #include "subsystem_headers/image.hpp"
+//THANK YOU: LemLib
+#include "lemlib/api.hpp"
 
 ////NOT IN PROGRAM CURRENTLY
 /*

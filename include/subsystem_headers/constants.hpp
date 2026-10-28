@@ -12,8 +12,10 @@ extern const int ROTATION_PRECISION;
 extern const int TRANSLATION_PRECISION;
 
 //DRIVETRAIN CONSTANTS
-extern const int DRIVETRAIN_RPM; 
+extern const int DRIVETRAIN_RPM;
+extern const float HORIZONTAL_TRACKING_WHEEL_OFFSET;
 extern const float TRACK_WIDTH;
+extern const float VERTICAL_TRACKING_WHEEL_OFFSET;
 extern const float WHEELBASE_DISTANCE;
 
 //DURATION  CONSTANTS
