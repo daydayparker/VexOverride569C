@@ -1,9 +1,6 @@
 #include "main.h"
 #include "liblvgl/lvgl.h"
 
-//THANK YOU VALOR
-//https://www.youtube.com/@valor2393S
-
 void display_img_from_c_array(){
 	// create a variable for the c array (image)
 	LV_IMAGE_DECLARE(humanoid_robot_image);

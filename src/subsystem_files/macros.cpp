@@ -1,5 +1,7 @@
 #include "main.h"
 
+const int SCORING_MACRO_DURATION = 1000;
+
 void macrosLoop(void*){
     while (true){
         if (!macroRunning)

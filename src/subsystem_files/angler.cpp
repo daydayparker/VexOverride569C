@@ -1,4 +1,6 @@
-#include "main.h"
+#include "subsystem_headers/angler.hpp"
+#include "subsystem_headers/globals.hpp"
+
 
 void anglerLoop(void*){
     while (true)

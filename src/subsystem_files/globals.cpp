@@ -1,5 +1,12 @@
 #include "main.h"
 
+//CONSTANTS
+const int DRIVETRAIN_RPM = 450;
+const float HORIZONTAL_TRACKING_WHEEL_OFFSET = 0;
+const float TRACK_WIDTH = 11.0;
+const float VERTICAL_TRACKING_WHEEL_OFFSET = 0;
+const float WHEELBASE_DISTANCE = 13.5;
+
 //CONTROLLER
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
@@ -71,8 +78,8 @@ lemlib::TrackingWheel horizontalTrackingWheel(&horizontalRotationSensor,
                                               HORIZONTAL_TRACKING_WHEEL_OFFSET
 );
 lemlib::TrackingWheel verticalTrackingWheel(&verticalRotationSensor,
-                                              lemlib::Omniwheel::NEW_2,
-                                              VERTICAL_TRACKING_WHEEL_OFFSET
+                                            lemlib::Omniwheel::NEW_2,
+                                            VERTICAL_TRACKING_WHEEL_OFFSET
 );
 
 ////SENSORS
@@ -109,5 +116,5 @@ lemlib::ControllerSettings angularController(2, // proportional gain (kP)
 lemlib::Chassis chassis(drivetrain,
                         lateralController,
                         angularController,
-                        sensors // odometry sensors
+                        sensors
 );

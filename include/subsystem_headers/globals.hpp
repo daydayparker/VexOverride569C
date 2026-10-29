@@ -1,4 +1,14 @@
+#ifndef _PROS_GLOBALS_HPP_
+#define _PROS_GLOBALS_HPP_
+
 #include "main.h"
+
+//CONSTANTS
+const int DRIVETRAIN_RPM;
+const float HORIZONTAL_TRACKING_WHEEL_OFFSET;
+const float TRACK_WIDTH;
+const float VERTICAL_TRACKING_WHEEL_OFFSET;
+const float WHEELBASE_DISTANCE;
 
 //CONTROLLER
 extern pros::Controller controller;
@@ -39,3 +49,5 @@ extern lemlib::ControllerSettings angularController;
 
 ////CHASSIS
 extern lemlib::Chassis chassis;
+
+#endif

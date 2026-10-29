@@ -71,12 +71,13 @@ void opcontrol(void);
 #endif
 
 #ifdef __cplusplus
+#include "subsystem_headers/angler.hpp"
 #include "subsystem_headers/autons.hpp"
 #include "subsystem_headers/cascade.hpp"
-#include "subsystem_headers/angler.hpp"
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/drive.hpp"
 #include "subsystem_headers/globals.hpp"
+#include "subsystem_headers/image.hpp"
 #include "subsystem_headers/intake.hpp"
 #include "subsystem_headers/macros.hpp"
 #include "subsystem_headers/states.hpp"
