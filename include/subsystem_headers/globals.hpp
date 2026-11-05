@@ -1,7 +1,5 @@
-#ifndef _PROS_GLOBALS_HPP_
-#define _PROS_GLOBALS_HPP_
-
-#include "main.h"
+#ifndef GLOBALS
+#define GLOBALS
 
 //CONSTANTS
 const int DRIVETRAIN_RPM;

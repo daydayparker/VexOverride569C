@@ -1,6 +1,9 @@
-#include "main.h"
+#ifndef AUTONS
+#define AUTONS
 
 void leftMatchAuton();
 void rightMatchAuton();
 void soloMatchAuton();
 void skillsAuton();
+
+#endif

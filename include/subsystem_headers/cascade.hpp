@@ -1,3 +1,6 @@
-#include "main.h"
+#ifndef CASCADE
+#define CASCADE
 
 void cascadeLoop(void*);
+
+#endif

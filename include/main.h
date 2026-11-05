@@ -79,7 +79,6 @@ void opcontrol(void);
 #include "subsystem_headers/image.hpp"
 #include "subsystem_headers/intake.hpp"
 #include "subsystem_headers/macros.hpp"
-#include "subsystem_headers/states.hpp"
 
 //THANK YOU'S
 ////IN PROGRAM CURRENTLY

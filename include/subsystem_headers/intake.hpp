@@ -1,3 +1,6 @@
-#include "main.h"
+#ifndef INTAKE
+#define INTAKE
 
 void intakeLoop(void*);
+
+#endif
