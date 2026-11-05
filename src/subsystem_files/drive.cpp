@@ -1,4 +1,5 @@
 #include "main.h"
+#include "subsystem_headers/globals.hpp"
 
 const int ANALOG_DEAD_ZONE = 20;
 

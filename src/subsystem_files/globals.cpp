@@ -1,4 +1,6 @@
 #include "main.h"
+#include "subsystem_headers/globals.hpp"
+#include "lemlib/api.hpp"
 
 //CONSTANTS
 const int DRIVETRAIN_RPM = 450;

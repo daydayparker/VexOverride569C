@@ -71,28 +71,6 @@ void opcontrol(void);
 #endif
 
 #ifdef __cplusplus
-#include "subsystem_headers/angler.hpp"
-#include "subsystem_headers/autons.hpp"
-#include "subsystem_headers/cascade.hpp"
-#include "subsystem_headers/drive.hpp"
-#include "subsystem_headers/globals.hpp"
-#include "subsystem_headers/image.hpp"
-#include "subsystem_headers/intake.hpp"
-#include "subsystem_headers/macros.hpp"
-
-//THANK YOU'S
-////IN PROGRAM CURRENTLY
-//THANK YOU: https://www.youtube.com/@valor2393S
-#include "subsystem_headers/image.hpp"
-//THANK YOU: LemLib
-#include "lemlib/api.hpp"
-
-////NOT IN PROGRAM CURRENTLY
-/*
-//THANK YOU: theol0403
-#include "gif-pros/gifclass.hpp"
-*/
-
 
 /**
  * You can add C++-only headers here

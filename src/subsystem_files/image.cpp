@@ -1,4 +1,4 @@
-#include "main.h"
+#include "subsystem_headers/image.hpp"
 #include "liblvgl/lvgl.h"
 
 void display_img_from_c_array(){
