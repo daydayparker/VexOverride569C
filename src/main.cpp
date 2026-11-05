@@ -1,4 +1,12 @@
 #include "main.h"
+#include "subsystem_headers/angler.hpp"
+#include "subsystem_headers/cascade.hpp"
+#include "subsystem_headers/constants.hpp"
+#include "subsystem_headers/drive.hpp"
+#include "subsystem_headers/globals.hpp"
+#include "subsystem_headers/image.hpp"
+#include "subsystem_headers/intake.hpp"
+#include "subsystem_headers/macros.hpp"
 
 /**
  * A callback function for LLEMU's center button.

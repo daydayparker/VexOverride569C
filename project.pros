@@ -1,7 +1,7 @@
 {
   "py/object": "pros.conductor.project.Project",
   "py/state": {
-    "project_name": "JulietTesting2",
+    "project_name": "OdomTesting",
     "target": "v5",
     "templates": {
       "LemLib": {
@@ -652,7 +652,7 @@
       }
     },
     "upload_options": {
-      "description": "Juliet Robot :D : 2",
+      "description": "Hello, it is me daydayparker. I am testing the odometry code.",
       "icon": "pizza",
       "slot": 2
     },

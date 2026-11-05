@@ -1,12 +1,15 @@
 #ifndef GLOBALS
 #define GLOBALS
 
+#include "main.h"
+#include "lemlib/api.hpp"
+
 //CONSTANTS
-const int DRIVETRAIN_RPM;
-const float HORIZONTAL_TRACKING_WHEEL_OFFSET;
-const float TRACK_WIDTH;
-const float VERTICAL_TRACKING_WHEEL_OFFSET;
-const float WHEELBASE_DISTANCE;
+const int DRIVETRAIN_RPM = 450;
+const float HORIZONTAL_TRACKING_WHEEL_OFFSET = 0;
+const float TRACK_WIDTH = 11.0;
+const float VERTICAL_TRACKING_WHEEL_OFFSET = 0;
+const float WHEELBASE_DISTANCE = 13.5;
 
 //CONTROLLER
 extern pros::Controller controller;

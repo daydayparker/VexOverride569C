@@ -1,7 +1,6 @@
 #include "main.h"
+#include "subsystem_headers/drive.hpp"
 #include "subsystem_headers/globals.hpp"
-
-const int ANALOG_DEAD_ZONE = 20;
 
 void setDrive(int left, int right){
     chassis.tank(left, right);

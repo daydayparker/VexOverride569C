@@ -1,9 +1,8 @@
 #include "main.h"
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/globals.hpp"
+#include "subsystem_headers/macros.hpp"
 #include "subsystem_headers/states.hpp"
-
-const int SCORING_MACRO_DURATION = 1000;
 
 void macrosLoop(void*){
     while (true){

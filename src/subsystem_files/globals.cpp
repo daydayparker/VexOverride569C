@@ -2,13 +2,6 @@
 #include "subsystem_headers/globals.hpp"
 #include "lemlib/api.hpp"
 
-//CONSTANTS
-const int DRIVETRAIN_RPM = 450;
-const float HORIZONTAL_TRACKING_WHEEL_OFFSET = 0;
-const float TRACK_WIDTH = 11.0;
-const float VERTICAL_TRACKING_WHEEL_OFFSET = 0;
-const float WHEELBASE_DISTANCE = 13.5;
-
 //CONTROLLER
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
 
