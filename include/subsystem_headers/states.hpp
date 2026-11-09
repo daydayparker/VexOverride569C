@@ -1,4 +1,5 @@
-#include "main.h"
+#ifndef STATES
+#define STATES
 
 //CASCADE STATES
 extern int cascadeState;
@@ -13,3 +14,5 @@ extern int intakeState;
 //MACRO STATES
 extern bool macroRunning;
 extern int macroState;
+
+#endif

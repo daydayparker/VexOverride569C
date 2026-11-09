@@ -37,6 +37,10 @@ extern pros::Rotation horizontalRotationSensor;
 extern pros::Rotation verticalRotationSensor;
 
 //LEMLIB
+////CONTROLLER SETTINGS
+extern lemlib::ControllerSettings lateralController;
+extern lemlib::ControllerSettings angularController;
+
 ////DRIVETRAIN
 extern lemlib::Drivetrain drivetrain;
 
@@ -44,9 +48,9 @@ extern lemlib::Drivetrain drivetrain;
 extern lemlib::TrackingWheel horizontalTrackingWheel;
 extern lemlib::TrackingWheel verticalTrackingWheel;
 
-////CONTROLLER SETTINGS
-extern lemlib::ControllerSettings lateralController;
-extern lemlib::ControllerSettings angularController;
+////EXPO DRIVE CURVES
+extern lemlib::ExpoDriveCurve throttleCurve;
+extern lemlib::ExpoDriveCurve steerCurve;
 
 ////CHASSIS
 extern lemlib::Chassis chassis;

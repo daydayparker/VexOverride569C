@@ -1,5 +1,6 @@
 #include "main.h"
 #include "subsystem_headers/angler.hpp"
+#include "subsystem_headers/autons.hpp"
 #include "subsystem_headers/cascade.hpp"
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/drive.hpp"
@@ -95,7 +96,7 @@ void competition_initialize() {
  */
 
 void autonomous() {
-
+	testAuton();
 }
 
 /**
