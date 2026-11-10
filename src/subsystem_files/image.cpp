@@ -1,5 +1,9 @@
 #include "subsystem_headers/image.hpp"
-#include "liblvgl/lvgl.h"
+#include "liblvgl/core/lv_obj_pos.h"
+#include "liblvgl/display/lv_display.h"
+#include "liblvgl/misc/lv_area.h"
+#include "liblvgl/misc/lv_types.h" 
+#include "liblvgl/widgets/image/lv_image.h"
 
 void display_img_from_c_array(){
 	// create a variable for the c array (image)
@@ -13,8 +17,4 @@ void display_img_from_c_array(){
 
 	//align image
 	lv_obj_align(img, LV_ALIGN_CENTER, 0, 0);
-}
-
-void display_img_from_file(const void * src){
-
 }

@@ -1,8 +1,12 @@
 #ifndef GLOBALS
 #define GLOBALS
 
-#include "main.h"
-#include "lemlib/api.hpp"
+#include "pros/imu.hpp"
+#include "pros/misc.hpp"
+#include "pros/motors.hpp"
+#include "pros/motor_group.hpp"
+#include "pros/rotation.hpp"
+#include "lemlib/chassis/chassis.hpp"
 
 //CONSTANTS
 const int DRIVETRAIN_RPM = 450;
