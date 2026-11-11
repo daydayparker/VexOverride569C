@@ -1,7 +1,7 @@
 #ifndef TESTING
 #define TESTING
 
-void testHorizontalRotationSensor(void*);
-void testVerticalRotationSensor(void*);
+void horizontalRotationSensorValueLoop(void*);
+void verticalRotationSensorValueLoop(void*);
 
 #endif

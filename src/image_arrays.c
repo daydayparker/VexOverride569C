@@ -9,7 +9,10 @@
 #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
     #include "lvgl.h"
 #else
-    #include "pros/apix.h"
+    //#include "pros/apix.h"
+    #include <stdint.h>
+    #include "liblvgl/draw/lv_image_dsc.h"
+    #include "liblvgl/misc/lv_color.h"
 #endif
 
 

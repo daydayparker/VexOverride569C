@@ -17,7 +17,7 @@ pros::MotorGroup cascadeMotorGroup(
 
 ////ANGLER MOTOR
 pros::Motor anglerMotor(
-    6,
+    16,
     pros::v5::MotorGears::blue,
     pros::v5::MotorUnits::degrees
 );
