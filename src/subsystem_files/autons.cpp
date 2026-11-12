@@ -23,10 +23,10 @@ void testAuton(){
     chassis.setPose(0, 0, 0);
 
     //START TESTING VALUES
-	pros::Task testingTask(horizontalRotationSensorValueLoop);
+	pros::Task testingTask(inertialSensorValueLoop);
 
     //SETS ROBOT TO 90 DEGREES
-    //chassis.turnToHeading(90, 100000);
+    chassis.turnToHeading(90, 1000);
 
     //TRANSLATES THE ROBOT
     //chassis.moveToPoint(0, 48, 100000);

@@ -56,7 +56,7 @@ pros::Rotation verticalRotationSensor(10);
 
 //LEMLIB
 ////CONTROLLER SETTINGS
-lemlib::ControllerSettings lateralController(10, // proportional gain (kP)
+lemlib::ControllerSettings lateralController(1, // proportional gain (kP)
                                               0, // integral gain (kI)
                                               3, // derivative gain (kD)
                                               0, // anti windup
@@ -66,7 +66,7 @@ lemlib::ControllerSettings lateralController(10, // proportional gain (kP)
                                               0, // large error range timeout, in milliseconds
                                               0 // maximum acceleration (slew)
 );
-lemlib::ControllerSettings angularController(0.25, // proportional gain (kP)
+lemlib::ControllerSettings angularController(1.5, // proportional gain (kP)
                                               0, // integral gain (kI)
                                               10, // derivative gain (kD)
                                               0, // anti windup

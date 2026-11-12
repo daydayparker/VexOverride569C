@@ -45,20 +45,7 @@ void initialize() {
 	cascadeMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
 	intakeMotorGroup.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
-	//CALIBRATE THE INERTIAL SENSOR
-	inertialSensor.reset();
-
-	//WAITING FOR THE INERTIAL SENSOR TO CALIBRATE
-	while (inertialSensor.is_calibrating()){
-		pros::delay(LOOP_DURATION);
-	}
-	
-	/*
-	while (true){
-		controller.print(0, 0, "%i", horizontalRotationSensor.get_position());
-        pros::delay(10); // delay to save resources. DO NOT REMOVE
-	}
-	*/
+	chassis.calibrate();
 }
 
 /**
