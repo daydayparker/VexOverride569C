@@ -66,9 +66,9 @@ lemlib::ControllerSettings lateralController(1, // proportional gain (kP)
                                               0, // large error range timeout, in milliseconds
                                               0 // maximum acceleration (slew)
 );
-lemlib::ControllerSettings angularController(1.5, // proportional gain (kP)
+lemlib::ControllerSettings angularController(3, // proportional gain (kP) //1.5
                                               0, // integral gain (kI)
-                                              10, // derivative gain (kD)
+                                              20, // derivative gain (kD) //10
                                               0, // anti windup
                                               0, // small error range, in degrees
                                               0, // small error range timeout, in milliseconds
