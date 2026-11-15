@@ -2,7 +2,7 @@
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/globals.hpp"
 
-void closeWallClosePin(){
+void mLClose(){
    //PART 1
     chassis.setPose(0, 0, 0);
     chassis.moveToPoint(0, 12, 1000);
@@ -17,7 +17,7 @@ void closeWallClosePin(){
     chassis.moveToPose(0, 0, 0, 0);
 }
 
-void closeWallFarPin(){
+void mLFar(){
    //PART 1
     chassis.setPose(0, 0, 0);
     chassis.moveToPoint(0, 12, 1000);
@@ -32,7 +32,7 @@ void closeWallFarPin(){
     chassis.moveToPose(0, 0, 0, 0);
 }
 
-void farWallClosePin(){
+void nonMLClose(){
     //PART 1
     chassis.setPose(0, 0, 0);
     chassis.moveToPoint(0, 12, 1000);
@@ -47,15 +47,25 @@ void farWallClosePin(){
     chassis.moveToPose(0, 0, 0, 0);
 }
 
-void farWallFarPin(){
-    //PART 1
+void nonMLFar(){
+    //SET ORIGIN OF CHASSIS
     chassis.setPose(0, 0, 0);
-    chassis.moveToPoint(0, 12, 1000);
+
+    //CHANGE ROLLER COLOR
+    chassis.moveToPoint(0, -6, 750, {.forwards = false}, false);
+    allDriveMotorGroup.move(0.7 * MAX_VOLTAGE);
+    pros::delay(250);
+    chassis.moveToPoint(0, -6, 750, {.forwards = false}, false);
+    allDriveMotorGroup.move(0.7 * MAX_VOLTAGE);
+    pros::delay(1000);
+    anglerMotor.move_relative(100, -MAX_VOLTAGE);
+    pros::delay(250);
 
     //PART 2
-    chassis.moveToPose(0, 0, -90, 1000);
+    chassis.moveToPoint(20, -12, 1000, {.forwards = false}, false);
     intakeMotorGroup.move(-MAX_VOLTAGE);
 
+    /*
     //PART 3
     intakeMotorGroup.move(0);
     cascadeMotorGroup.move_absolute(0, MAX_VOLTAGE);
@@ -67,6 +77,7 @@ void farWallFarPin(){
     chassis.moveToPose(0, 0, 0, 0);
     cascadeMotorGroup.move_absolute(0, -MAX_VOLTAGE);
     intakeMotorGroup.move(-MAX_VOLTAGE);
+    */
 }
 
 void skillsAuton(){
@@ -74,12 +85,5 @@ void skillsAuton(){
 }
 
 void testAuton(){
-    //CALIBRATES THE POSITION
-    chassis.setPose(0, 0, 0);
-
-    //SETS ROBOT TO 90 DEGREES
-    //chassis.turnToHeading(90, 1000);
-
-    //TRANSLATES THE ROBOT
-    chassis.moveToPoint(0, 36, 100000);
+    anglerMotor.move_absolute(-1000, -MAX_VOLTAGE);
 }

@@ -1,10 +1,10 @@
 #ifndef AUTONS
 #define AUTONS
 
-void closeWallClosePin();
-void closeWallFarPin();
-void farWallClosePin();
-void farWallFarPin();
+void mLClose();
+void mLFar();
+void nonMLClose();
+void nonMLFar();
 void skillsAuton();
 void testAuton();
 
