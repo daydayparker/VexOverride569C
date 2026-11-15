@@ -1,9 +1,10 @@
 #ifndef AUTONS
 #define AUTONS
 
-void leftMatchAuton();
-void rightMatchAuton();
-void soloMatchAuton();
+void closeWallClosePin();
+void closeWallFarPin();
+void farWallClosePin();
+void farWallFarPin();
 void skillsAuton();
 void testAuton();
 

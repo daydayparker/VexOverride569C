@@ -45,6 +45,9 @@ void initialize() {
 	cascadeMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
 	intakeMotorGroup.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
+	//CALIBRATE MOTORS
+	cascadeMotorGroup.tare_position_all();
+	intakeMotorGroup.tare_position_all();
 	chassis.calibrate();
 }
 
