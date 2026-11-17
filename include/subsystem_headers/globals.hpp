@@ -22,19 +22,19 @@ extern pros::Controller controller;
 extern pros::Imu inertialSensor;
 
 //MOTORS
-////CASCADE MOTORS
-extern pros::MotorGroup cascadeMotorGroup;
-
 ////CLAW MOTOR
-extern pros::Motor anglerMotor;
+extern pros::Motor clawMotor;
 
-////DRIVE MOTORS
+////DRIVE MOTOR GROUPS
 extern pros::MotorGroup allDriveMotorGroup;
 extern pros::MotorGroup leftDriveMotorGroup;
 extern pros::MotorGroup rightDriveMotorGroup;
 
-////INTAKE MOTOR
-extern pros::MotorGroup intakeMotorGroup;
+////LIFT MOTOR GROUPS
+extern pros::MotorGroup liftMotorGroup;
+
+////TOGGLER MOTOR
+extern pros::Motor togglerMotor;
 
 //ROTATION SENSORS
 extern pros::Rotation horizontalRotationSensor;

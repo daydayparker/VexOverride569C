@@ -1,40 +1,41 @@
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/globals.hpp"
+#include "subsystem_headers/lift.hpp"
 #include "subsystem_headers/states.hpp"
 
-void cascadeLoop(void*){
+void liftLoop(void*){
     while (true)
     {
         if (!macroRunning)
         {
             if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1))
             {
-                cascadeState = 0;
+                liftState = 0;
             }
             else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2)){
-                cascadeState = 1;
+                liftState = 1;
 
             }
             else{
-                cascadeState = 2;
+                liftState = 2;
             }
             
-            switch (cascadeState)
+            switch (liftState)
             {
             //UP: HOLD
             case 0:
-                cascadeMotorGroup.move(MAX_VOLTAGE);
+                liftMotorGroup.move(MAX_VOLTAGE);
                 break;
             //DOWN: HOLD
             case 1:
-                cascadeMotorGroup.move(-MAX_VOLTAGE);
+                liftMotorGroup.move(-MAX_VOLTAGE);
                 break;
-            //STOP CASCADE
+            //STOP LIFT
             case 2:
-                cascadeMotorGroup.move(0);
+                liftMotorGroup.move(0);
                 break;
             default:
-                cascadeMotorGroup.move(0); 
+                liftMotorGroup.move(0); 
                 break;  
             }
         }

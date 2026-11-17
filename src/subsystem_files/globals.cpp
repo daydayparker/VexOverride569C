@@ -7,16 +7,8 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 pros::Imu inertialSensor(19);
 
 //MOTORS
-////CASCADE MOTORS
-//////{LEFT, RIGHT}
-pros::MotorGroup cascadeMotorGroup(
-    {-2, 4},
-    pros::v5::MotorGears::green, 
-    pros::v5::MotorUnits::degrees
-);
-
-////ANGLER MOTOR
-pros::Motor anglerMotor(
+////CLAW MOTOR
+pros::Motor clawMotor(
     16,
     pros::v5::MotorGears::blue,
     pros::v5::MotorUnits::degrees
@@ -49,6 +41,13 @@ pros::MotorGroup intakeMotorGroup(
     pros::v5::MotorUnits::degrees
 );
 
+////LIFT GROUP
+//////{LEFT, RIGHT}
+pros::MotorGroup liftMotorGroup(
+    {-2, 4},
+    pros::v5::MotorGears::green, 
+    pros::v5::MotorUnits::degrees
+);
 
 //ROTATION SENSORS
 pros::Rotation horizontalRotationSensor(-20);

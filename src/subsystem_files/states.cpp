@@ -1,15 +1,15 @@
 #include "subsystem_headers/states.hpp"
 
-//CASCADE STATES
-int cascadeState = 0;
+//CLAW STATES
+bool clawSpinning = false;
+int clawState = 1;
 
-//ANGLER STATES
-int anglerState;
-
-//INTAKE STATES
-bool intakeOn = false;
-int intakeState = 1;
+//LIFT STATES
+int liftState = 2;
 
 //MACRO STATES
 bool macroRunning = false;
 int macroState = 0;
+
+//TOGGLER STATES
+int togglerState = 2;

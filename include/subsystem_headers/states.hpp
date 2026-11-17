@@ -1,18 +1,18 @@
 #ifndef STATES
 #define STATES
 
-//CASCADE STATES
-extern int cascadeState;
+//CLAW STATES
+extern bool clawSpinning;
+extern int clawState;
 
-//ANGLER STATES
-extern int anglerState;
-
-//INTAKE STATES
-extern bool intakeOn;
-extern int intakeState;
+//LIFT STATES
+extern int liftState;
 
 //MACRO STATES
 extern bool macroRunning;
 extern int macroState;
+
+//TOGGLER STATES
+extern int togglerState;
 
 #endif

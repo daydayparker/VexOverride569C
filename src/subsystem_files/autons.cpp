@@ -57,13 +57,9 @@ void nonMLFar(){
     pros::delay(250);
     chassis.moveToPoint(0, -6, 750, {.forwards = false}, false);
     allDriveMotorGroup.move(0.7 * MAX_VOLTAGE);
-    pros::delay(1000);
-    anglerMotor.move_relative(100, -MAX_VOLTAGE);
-    pros::delay(250);
 
     //PART 2
     chassis.moveToPoint(20, -12, 1000, {.forwards = false}, false);
-    intakeMotorGroup.move(-MAX_VOLTAGE);
 
     /*
     //PART 3
@@ -85,5 +81,5 @@ void skillsAuton(){
 }
 
 void testAuton(){
-    anglerMotor.move_absolute(-1000, -MAX_VOLTAGE);
+
 }
