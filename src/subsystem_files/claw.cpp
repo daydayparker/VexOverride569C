@@ -8,33 +8,37 @@ void clawLoop(void*){
     {
         if (!macroRunning)
         {
-            if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1))
+            if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R1))
             {
-                clawState = 0;
+                if (clawState == 0) {
+                    clawState = 2;
+                }
+                else {
+                    clawState = 0;
+                }
             }
             else if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R2)){
-                clawState = 1;
-            }
-            //NEED OTHER CONDITION HERE
-            //ALSO NEED TO MAKE THE DOUBLE TOGGLE THINGIE ACTUALLY WORK
-            //NEED TO MAKE SURE CAN SWITCH FROM CAN GRAB TO OPEN AND VICE VERSA
-            else if (clawSpinning){
-                clawState = 2;
+                if (clawState == 1) {
+                    clawState = 2;
+                }
+                else {
+                    clawState = 1;
+                }
             }
  
             switch (clawState)
             {
-            //REVERSE: HOLD
+            //TAKE IN CUPS AND PINS: TOGGLE
             case 0:
+                clawMotor.move(MAX_VOLTAGE);
+                break;
+            //RELEASE CUPS AND PINS: TOGGLE
+            case 1:
                 clawMotor.move(-MAX_VOLTAGE);
                 break;
-            //STOP INTAKE
-            case 1:
-                clawMotor.move(0);
-                break;
-            //SPIN INTAKE FORWARD: TOGGLE
+            //STOP CLAW MOTOR
             case 2:
-                clawMotor.move(MAX_VOLTAGE);
+                clawMotor.move(0);
                 break;
             default:
                 clawMotor.move(0); 

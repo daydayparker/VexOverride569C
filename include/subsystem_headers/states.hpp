@@ -2,7 +2,6 @@
 #define STATES
 
 //CLAW STATES
-extern bool clawSpinning;
 extern int clawState;
 
 //LIFT STATES

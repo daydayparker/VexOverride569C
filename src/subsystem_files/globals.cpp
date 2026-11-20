@@ -1,4 +1,6 @@
 #include "subsystem_headers/globals.hpp"
+#include "pros/abstract_motor.hpp"
+#include "pros/motors.hpp"
 
 //CONTROLLER
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
@@ -34,18 +36,18 @@ pros::MotorGroup rightDriveMotorGroup(
     pros::v5::MotorUnits::degrees
 );
 
-////INTAKE MOTOR
-pros::MotorGroup intakeMotorGroup(
-    {1, -9},
-    pros::v5::MotorGears::blue, 
-    pros::v5::MotorUnits::degrees
-);
-
 ////LIFT GROUP
 //////{LEFT, RIGHT}
 pros::MotorGroup liftMotorGroup(
     {-2, 4},
     pros::v5::MotorGears::green, 
+    pros::v5::MotorUnits::degrees
+);
+
+//TOGGLER MOTOR
+pros::Motor togglerMotor(
+    1,
+    pros::v5::MotorGears::blue,
     pros::v5::MotorUnits::degrees
 );
 

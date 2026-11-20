@@ -1,13 +1,18 @@
 #include "main.h"
-#include "subsystem_headers/angler.hpp"
 #include "subsystem_headers/autons.hpp"
-#include "subsystem_headers/cascade.hpp"
+#include "subsystem_headers/claw.hpp"
 #include "subsystem_headers/constants.hpp"
 #include "subsystem_headers/drive.hpp"
 #include "subsystem_headers/globals.hpp"
 #include "subsystem_headers/image.hpp"
-#include "subsystem_headers/intake.hpp"
-#include "subsystem_headers/macros.hpp"
+#include "subsystem_headers/lift.hpp"
+#include "subsystem_headers/toggler.hpp"
+
+//TO-DO LIST
+/*
+FIX MACROS SETUP WHERE THEY CAN BE CANCELLED
+SYNTAX FIXING
+*/
 
 /**
  * A callback function for LLEMU's center button.
@@ -38,18 +43,18 @@ void initialize() {
 	display_img_from_c_array();
 	
 	//PUT AWESOME TEXT ON THE CONTROLLER SCREEN
-	//controller.print(0, 0, "By: %s", "daydayparker");
+	controller.print(0, 0, "By: %s", "daydayparker");
 
 	//SET MOTOR BRAKE TYPES
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-	anglerMotor.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
-	cascadeMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
-	intakeMotorGroup.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	clawMotor.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+	liftMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_HOLD);
+	togglerMotor.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
 	//CALIBRATE MOTORS
-	anglerMotor.tare_position();
-	cascadeMotorGroup.tare_position_all();
-	intakeMotorGroup.tare_position_all();
+	clawMotor.tare_position();
+	liftMotorGroup.tare_position_all();
+	togglerMotor.tare_position();
 	chassis.calibrate();
 }
 
@@ -109,10 +114,9 @@ void autonomous() {
 void opcontrol(){
 	allDriveMotorGroup.set_brake_mode_all(pros::E_MOTOR_BRAKE_COAST);
 	
-	pros::Task anglerTask(anglerLoop);
-	pros::Task cascadeTask(cascadeLoop);
-	pros::Task intakeTask(intakeLoop);
-	pros::Task macrosTask(macrosLoop);
+	pros::Task clawTask(clawLoop);
+	pros::Task liftTask(liftLoop);
+	pros::Task togglerTask(togglerLoop);
 
 	while (true){
 		setDriveByDriver();

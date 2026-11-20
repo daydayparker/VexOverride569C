@@ -1,8 +1,7 @@
 #include "subsystem_headers/states.hpp"
 
 //CLAW STATES
-bool clawSpinning = false;
-int clawState = 1;
+int clawState = 2;
 
 //LIFT STATES
 int liftState = 2;

@@ -20,11 +20,11 @@ void togglerLoop(void*){
             
             switch (togglerState)
             {
-            //LOWER: HOLD
+            //SPIN FORWARDS: HOLD
             case 0:
                 togglerMotor.move(MAX_VOLTAGE);
                 break;
-            //RAISE: HOLD
+            //SPIN BACKWARDS: HOLD
             case 1:
                 togglerMotor.move(-MAX_VOLTAGE);
                 break;
